@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Pokédex</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> </head>
+<body>
+    <h1>Registra un nuevo Pokémon</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="id_nombre">Nombre del Pokémon:</label>
+            {{ pokemon_form.nombre }}
+        </div>
+
+        <div class="form-group">
+            <label for="id_numero_pokedex">Número de Pokédex:</label>
+            {{ pokemon_form.numero_pokedex }}
+        </div>
+
+        <div class="form-group">
+            <label for="id_nombre">Tipo del Pokémon:</label>
+            {{ tipo_form.nombre }}
+        </div>
+
+        <div class="form.group">
+            <label for="id_nombre">Habilidad del Pokémon:</label>
+            {{ habilidad_form.nombre }}
+        </div>
+
+        <button type="submit">Registrar</button>
+    </form>
+    <a href="{% url 'pokedex_pag' %}">Ir a pokedex</a>
+</body>
+</html>

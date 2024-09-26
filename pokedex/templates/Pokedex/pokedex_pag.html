@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>pokedex</title>
+    {% load static %}
+</head>
+<body>
+
+    <form method="get">
+        <input type="text" name="query" placeholder="Buscar Pokémon" value="{{ query }}">
+        <button type="submit">Buscar</button>
+        <button type="submit" name="all">Ver todos</button>
+    </form>
+
+    <ul>
+        {% for pokemon in resultados %}
+            <li>{{ pokemon.nombre }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'index' %}">Volver al ingresar pokemon</a>
+</body>
+</html>

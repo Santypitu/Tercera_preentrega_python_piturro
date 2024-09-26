@@ -1,0 +1,20 @@
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+venv/
+env/
+.virtualenv/
+db.sqlite3
+*.sqlite3
+*.env
+.env
+*.log
+staticfiles/
+media/
+Thumbs.db  # Windows
+*.egg
+*.egg-info/
+dist/
+build/
+pip-log.txt
